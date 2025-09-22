@@ -67,3 +67,10 @@ for (let i = 0; i < 3; i++) {
 
   console.log(`Customer ${i + 1} (${customerType}) total: $${total.toFixed(2)}`);
 }
+
+// Step 6: Log each key/value of a single product (after discounts)
+let sampleProduct = products[0];
+console.log("Sample product key/value pairs:");
+for (let key in sampleProduct) {
+  console.log(`${key}: ${sampleProduct[key]}`);
+}
