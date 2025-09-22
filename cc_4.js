@@ -10,6 +10,8 @@ let products =[
 
 //Step 3: Apply Category Discounts 
 for (let product of products){
+    let discount = 0; 
+
  switch (product.category){
     case "electronics":
         discount = .20;
@@ -22,12 +24,13 @@ for (let product of products){
         discount = .10;
         break;
     default:
-        discount = 0
+        discount = 0;
     break;
  }
-}
+
 
  let promoPrice = product.price * (1 - discount);
  product.promoPrice = promoPrice;
+}
  
- console.log(products)
+ console.log(products); 
