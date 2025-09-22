@@ -62,3 +62,8 @@ for (let i = 0; i < 3; i++) {
       item.inventory--; // reduce inventory
     }
   }
+
+    total = applyCustomerDiscount(total, customerType);
+
+  console.log(`Customer ${i + 1} (${customerType}) total: $${total.toFixed(2)}`);
+}
