@@ -34,3 +34,14 @@ for (let product of products){
 }
  
  console.log(products); 
+
+ // Step 4: Customer type discounts
+function applyCustomerDiscount(total, customerType) {
+  if (customerType === "student") {
+    return total * 0.95; // 5% extra off
+  } else if (customerType === "senior") {
+    return total * 0.93; // 7% extra off
+  } else {
+    return total; // regular
+  }
+}
