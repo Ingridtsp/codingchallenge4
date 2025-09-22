@@ -45,3 +45,20 @@ function applyCustomerDiscount(total, customerType) {
     return total; // regular
   }
 }
+
+// Step 5: Simulate checkout process for 3 customers
+let customerTypes = ["regular", "student", "senior"];
+
+for (let i = 0; i < 3; i++) {
+  let customerType = customerTypes[i];
+  let cart = []; // customer picks 2 random items
+  cart.push(products[Math.floor(Math.random() * products.length)]);
+  cart.push(products[Math.floor(Math.random() * products.length)]);
+
+  let total = 0;
+  for (let item of cart) {
+    if (item.inventory > 0) {
+      total += item.price;
+      item.inventory--; // reduce inventory
+    }
+  }
