@@ -74,3 +74,12 @@ console.log("Sample product key/value pairs:");
 for (let key in sampleProduct) {
   console.log(`${key}: ${sampleProduct[key]}`);
 }
+
+// Step 7: Log all product info with Object.entries + destructuring
+console.log("Updated product info:");
+for (let product of products) {
+  for (let [key, value] of Object.entries(product)) {
+    console.log(`${key}: ${value}`);
+  }
+  console.log("---");
+}
